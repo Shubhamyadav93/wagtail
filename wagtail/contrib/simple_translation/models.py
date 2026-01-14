@@ -5,7 +5,6 @@ from django.utils.translation import gettext_lazy as _
 from wagtail import hooks
 from wagtail.models import Locale
 
-
 class SimpleTranslation(Model):
     """
     SimpleTranslation, dummy model to create the `submit_translation` permission.
@@ -20,6 +19,7 @@ class SimpleTranslation(Model):
         permissions = [
             ("submit_translation", _("Can submit translations")),
         ]
+
 
 
 @hooks.register("after_create_page")
